@@ -1,0 +1,39 @@
+/* General */
+@import 'fonts';
+@import 'variables';
+
+/* Components */
+@import 'components/header';
+
+/* Pages */
+@import 'pages/home';
+
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $bg;
+    color: #fff;
+    font-family: "Noto Sans";
+}
+
+// Don't let dragging on images
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    transition: 200ms;
+}
+
+// Text highlight color
+::selection {
+    background-color: rgba(255, 255, 255, 0.2);
+}

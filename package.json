@@ -1,0 +1,23 @@
+{
+  "name": "cobaltext",
+  "version": "1.0.0",
+  "description": "A lightweight coding editor",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oynozan/cobaltext.git"
+  },
+  "author": "oynozan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oynozan/cobaltext/issues"
+  },
+  "homepage": "https://github.com/oynozan/cobaltext#readme",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "electron": "^25.2.0"
+  }
+}
