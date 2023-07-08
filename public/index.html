@@ -2,15 +2,51 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="assets/css/main.css" />
+        <title>Cobaltext</title>
     </head>
     <body>
         <!-- Custom window frame -->
         <header>
             <!-- Menu options -->
             <div class="menu">
-
+                <img class="logo" src="images/logo.png" />
+                <ul>
+                    <li>
+                        <span>File</span>
+                        <div class="dropdown">
+                            <ul>
+                                <li>New File</li>
+                                <li class="seperate">Open File</li>
+                                <li>Save</li>
+                                <li>Save As...</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Help</span>
+                        <div class="dropdown">
+                            <ul>
+                                <li>Welcome</li>
+                                <li class="seperate">Shortcuts</li>
+                                <li>Website</li>
+                                <li>Bug Report</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <span>Customize</span>
+                        <div class="dropdown">
+                            <ul>
+                                <li>Font</li>
+                                <li>Themes</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <!-- File name and brand text -->
             <div class="text">
@@ -29,5 +65,17 @@
                 </button>
             </div>
         </header>
+
+        <main>
+
+        </main>
+
+        <footer>
+            
+        </footer>
+
+        <script src="assets/js/global.js"></script>
+        <script src="assets/js/window.js"></script>
+        <script src="assets/js/dropdown.js"></script>
     </body>
 </html>

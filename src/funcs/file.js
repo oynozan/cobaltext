@@ -1,9 +1,9 @@
 const fs = require('fs');
 
 class File {
-    read(location) {
+    read(dir) {
         return new Promise((resolve, reject) => {
-            fs.readFile(location, 'utf8', (err, data) => {
+            fs.readFile(dir, 'utf8', (err, data) => {
                 if (err) {
                     console.error(err);
                     return reject();
@@ -13,7 +13,7 @@ class File {
         })
     }
 
-    write() {
+    write(dir, content) {
 
     }
 }

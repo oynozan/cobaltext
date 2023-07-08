@@ -3,7 +3,9 @@
 @import 'variables';
 
 /* Components */
+@import 'components/dropdown';
 @import 'components/header';
+@import 'components/footer';
 
 /* Pages */
 @import 'pages/home';
@@ -31,6 +33,12 @@ button {
     background-color: transparent;
     border: none;
     transition: 200ms;
+}
+
+main {
+    overflow: hidden;
+    // Height is (screen height - (header height + footer height))
+    height: calc(100vh - (#{$header-height} + #{$footer-height}));
 }
 
 // Text highlight color
