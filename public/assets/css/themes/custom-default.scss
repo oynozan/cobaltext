@@ -1,0 +1,161 @@
+.CodeMirror {
+    cursor: text;
+    height: 100%;
+    background: $bg;
+    color: #d4d4d4;
+    font-size: 35px;
+    font-family: "Inconsolata";
+    overflow: hidden;
+
+    pre {
+        padding-left: 10px;
+    }
+
+    &-selectedtext {
+        background: $default-selected-text;
+    }
+
+    &-gutters {
+        background: $bg;
+        border-right: 0px;
+    }
+
+    &-linenumber {
+        font-family: "Inconsolata";
+        padding: 0 10px;
+        min-width: 25px;
+        color: rgb(152, 152, 190);
+        font-size: 24px;
+        height: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-gutter-background {
+        background-color: $default-activeline;
+    }
+
+    &-activeline .CodeMirror-linenumber.CodeMirror-gutter-elt {
+        color: rgb(188, 188, 244);
+    }
+
+    &-activeline-background {
+        background: $default-activeline;
+    }
+
+    &-matchingbracket {
+        outline: 1px solid grey;
+        color: #D4D4D4 !important;
+    }
+
+    &-cursor {
+        border-left: 2px solid #ffffff;
+    }
+
+    /* Syntax Highlighting */
+    .cm {
+        &-keyword {
+            color: #0ef4f8;
+        }
+        &-atom {
+            color: #F39B35;
+        }
+        &-number {
+            color: #A06FCA;
+        }
+        &-def {
+            color: #98E342;
+        }
+        &-property {
+            color: #ffffff;
+            font-style: normal;
+        }
+        &-variable {
+            color: #ffffff;
+            font-style: normal;
+        }
+        &-variable-2 {
+            color: #ff9d00;
+            font-style: normal;
+        }
+        &-variable-3 {
+            color: #A06FCA;
+        }
+        &-type.cm-def {
+            color: #FC4384;
+            font-style: normal;
+            text-decoration: underline;
+        }
+        &-property.cm-def,
+        &-callee {
+            color: #FC4384;
+            font-style: normal;
+        }
+
+        &-operator,
+        &-qualifier {
+            color: #FC4384;
+        }
+    }
+
+    .cm-tag {
+        color: #FC4384;
+
+        &.cm-bracket {
+            color: #D4D4D4;
+        }
+    }
+
+    .cm-attribute {
+        color: #A06FCA;
+    }
+
+    .cm-comment {
+        color: #13aa1a;
+        font-weight: normal;
+
+        &.cm-tag {
+            color: #FC4384;
+        }
+
+        &.cm-attribute {
+            color: #D4D4D4;
+        }
+    }
+
+    .cm-string {
+        color: #E6DB74;
+    }
+
+    .cm-string-2 {
+        color: #F39B35;
+    }
+
+    .cm-meta {
+        color: #a0a0a0;
+        background: inherit;
+    }
+
+    .cm-builtin {
+        color: #FC4384;
+    }
+
+    .cm-header {
+        color: #da7dae;
+    }
+
+    .cm-hr {
+        color: #98E342;
+    }
+
+    .cm-link {
+        color: #696d70;
+        font-style: italic;
+        text-decoration: none;
+    }
+
+    .cm-s-yonce span.cm-type {
+        color: #A06FCA;
+    }
+}

@@ -1,14 +1,16 @@
 /* General */
 @import 'fonts';
 @import 'variables';
+@import 'mixins';
 
 /* Components */
 @import 'components/dropdown';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/tabs';
 
 /* Pages */
-@import 'pages/home';
+@import 'pages/editor';
 
 /* General styling */
 body {
@@ -17,6 +19,7 @@ body {
     background-color: $bg;
     color: #fff;
     font-family: "Noto Sans";
+    overflow: hidden;
 }
 
 // Don't let dragging on images
@@ -33,6 +36,11 @@ button {
     background-color: transparent;
     border: none;
     transition: 200ms;
+}
+
+textarea, *[contenteditable] {
+    outline: none;
+    resize: none;
 }
 
 main {

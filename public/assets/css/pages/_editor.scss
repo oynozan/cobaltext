@@ -1,0 +1,27 @@
+$parent-offset: 4px;
+$child-offset: 20px;
+
+.editor-container {
+    width: calc(100% - #{$parent-offset});
+    height: calc(100% - #{$parent-offset});
+
+    // Main coding editor
+    #editor {
+        display: block;
+        width: calc(100% - #{$child-offset});
+        height: calc(100% - #{$child-offset});
+
+        // Default styling of editor
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-family: "Inconsolata";
+        font-weight: 400;
+        font-size: 32px;
+        caret-color: #fff;
+        white-space: pre;
+        margin: 10px 0 0 10px;
+        padding: 0 5px 5px 0;
+        cursor: auto;
+    }
+}

@@ -1,12 +1,5 @@
 $header-height: 36px;
 
-@mixin header-span {
-    opacity: .9;
-    font-size: 14px;
-    font-weight: 300;
-    letter-spacing: .5px;
-}
-
 header {
     background-color: $header;
     width: 100%;

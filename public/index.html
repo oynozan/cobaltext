@@ -4,7 +4,14 @@
         <meta charset="UTF-8" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CodeMirror Library -->
+        <link rel="stylesheet" href="lib/codemirror/lib/codemirror.css">
+
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/themes/themes.css" />
+
         <title>Cobaltext</title>
     </head>
     <body>
@@ -14,6 +21,7 @@
             <div class="menu">
                 <img class="logo" src="images/logo.png" />
                 <ul>
+                    <!-- File operations -->
                     <li>
                         <span>File</span>
                         <div class="dropdown">
@@ -25,6 +33,8 @@
                             </ul>
                         </div>
                     </li>
+                    
+                    <!-- Help operations -->
                     <li>
                         <span>Help</span>
                         <div class="dropdown">
@@ -37,6 +47,8 @@
                             </ul>
                         </div>
                     </li>
+
+                    <!-- Customization operations -->
                     <li>
                         <span>Customize</span>
                         <div class="dropdown">
@@ -48,10 +60,12 @@
                     </li>
                 </ul>
             </div>
+
             <!-- File name and brand text -->
             <div class="text">
-                <span>Cobaltext - Lightweight Coding Editor</span>
+                <span id="title">Cobaltext - Lightweight Coding Editor</span>
             </div>
+
             <!-- Buttons for changing state of window -->
             <div class="buttons">
                 <button id="minimize-window">
@@ -66,16 +80,54 @@
             </div>
         </header>
 
+        <!-- Body Content -->
         <main>
-
+            <div id="tabs">
+                <div class="tab"></div>
+            </div>
+            <div class="editor-container">
+                <textarea id="editor" spellcheck="false"></textarea>
+            </div>
         </main>
 
+        <!-- Bottom Footer -->
         <footer>
-            
+            <div></div>
+            <div class="buttons">
+                <button id="notes-button">
+                    <img src="images/icons/notes.png" />
+                </button>
+                <button id="terminal-button">
+                    <img src="images/icons/terminal.png" />
+                </button>
+            </div>
         </footer>
 
+        <!-- Terminal Window -->
+        <div id="terminal" class="bottom-drawer">
+
+        </div>
+
+        <!-- Notes Window -->
+        <div id="notes" class="bottom-drawer">
+
+        </div>
+
+        <!-- CodeMirror Library -->
+        <script src="lib/codemirror/lib/codemirror.js"></script>
+        <script src="lib/codemirror/keymap/sublime.js"></script>
+
+        <!-- CodeMirror Addons -->
+        <script src="lib/codemirror/addon/selection/active-line.js"></script>
+        <script src="lib/codemirror/addon/selection/mark-selection.js"></script>
+        <script src="lib/codemirror/addon/edit/closebrackets.js"></script>
+        <script src="lib/codemirror/addon/comment/continuecomment.js"></script>
+        <script src="lib/codemirror/addon/scroll/scrollpastend.js"></script>
+
+        <!-- Custom Javascript files -->
         <script src="assets/js/global.js"></script>
         <script src="assets/js/window.js"></script>
         <script src="assets/js/dropdown.js"></script>
+        <script src="assets/js/editor.js"></script>
     </body>
 </html>

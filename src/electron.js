@@ -106,6 +106,8 @@ class Electron {
 
         // Custom shortcuts
         this.window.webContents.on('before-input-event', (event, input) => {
+            input.key = input.key.toLowerCase();
+
             if (input.type === "keyDown") {
                 /* Shortcuts for development process */
                 if (this.nodeEnv === "development") {
