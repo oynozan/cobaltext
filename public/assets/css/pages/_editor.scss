@@ -1,15 +1,11 @@
-$parent-offset: 4px;
-$child-offset: 20px;
-
 .editor-container {
-    width: calc(100% - #{$parent-offset});
-    height: calc(100% - #{$parent-offset});
+    width: 100%;
+    height: calc(100% - 4px);
+    margin-top: -4px;
 
     // Main coding editor
     #editor {
         display: block;
-        width: calc(100% - #{$child-offset});
-        height: calc(100% - #{$child-offset});
 
         // Default styling of editor
         background-color: transparent;

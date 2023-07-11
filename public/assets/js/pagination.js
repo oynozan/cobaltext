@@ -1,0 +1,9 @@
+class Pagination {
+    addPage() {
+
+    }
+
+    removePage() {
+        
+    }
+}

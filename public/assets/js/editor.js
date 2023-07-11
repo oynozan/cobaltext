@@ -6,9 +6,6 @@ class Editor {
 
     static CodeMirrorSettings = {
         lineNumbers: true,
-        styleActiveLine: true,
-        styleActiveSelected: true,
-        styleSelectedText:true,
         theme: "default",
         keyMap: "sublime",
         indentUnit: 4,
@@ -18,7 +15,12 @@ class Editor {
         autoCloseBrackets: true,
         autoCloseTags: true,
         continueLineComment: true,
-        scrollPastEnd: true
+        scrollPastEnd: true,
+        
+        // Highlighting active line
+        styleActiveLine: true,
+        styleActiveSelected: true,
+        styleSelectedText:true,
     }
 
     constructor(CodeMirror) {
@@ -40,3 +42,6 @@ cm.addKeyMap(Editor.keyMap);
 
 // Create instance
 const editor = new Editor(cm);
+
+// Make CodeMirror a global variable
+window.cm = cm;

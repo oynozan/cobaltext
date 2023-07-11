@@ -1,0 +1,71 @@
+@mixin tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $tab;
+    font-size: 14px;
+    padding: 0 10px;
+    height: 100%;
+    padding: 0 15px;
+    border: none;
+    transition: 200ms;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.tabs-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0px 4px 11px 9px rgb(0 0 0 / 8%);
+
+    #tabs {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-x: auto;
+        height: 40px;
+        width: 100%;
+    
+        > .tab {
+            @include tab;
+    
+            // Active tab
+            &.selected {
+                border-bottom: none;
+                background-color: $active-tab;
+                border-radius: 0 0 5px 5px;
+            }
+    
+            &:not(.selected) {
+                &:hover {
+                    background-color: $hover-tab;
+                }
+            }
+        }
+
+        &:hover {
+            &::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 7px;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: transparent;
+            border-radius: 7px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+}
