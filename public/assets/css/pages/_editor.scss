@@ -1,7 +1,8 @@
 .editor-container {
     width: 100%;
-    height: calc(100% - 4px);
-    margin-top: -4px;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    margin-top: 0px;
 
     // Main coding editor
     #editor {

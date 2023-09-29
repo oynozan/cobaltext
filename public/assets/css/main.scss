@@ -1,18 +1,22 @@
-/* General */
+/* IMPORTS */
+// General
 @import 'fonts';
 @import 'variables';
 @import 'mixins';
 
-/* Components */
+// Components
 @import 'components/dropdown';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/tabs';
+@import 'components/drawer';
+@import 'components/terminal';
+@import 'components/notes';
 
-/* Pages */
+// Pages
 @import 'pages/editor';
 
-/* General styling */
+/* STYLING */
 body {
     margin: 0;
     padding: 0;

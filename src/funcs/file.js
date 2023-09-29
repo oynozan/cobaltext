@@ -14,7 +14,15 @@ class File {
     }
 
     write(dir, content) {
-
+        return new Promise((resolve, reject) => {
+            fs.writeFile(dir, content, (err, data) => {
+                if (err) {
+                    console.error(err);
+                    return reject();
+                }
+                else return resolve(data);
+            })
+        })
     }
 }
 

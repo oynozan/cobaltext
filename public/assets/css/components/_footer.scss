@@ -5,6 +5,8 @@ footer {
     background-color: $header;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 10;
 
     > div {
         height: 100%;
@@ -18,16 +20,25 @@ footer {
         align-items: center;
         justify-content: flex-end;
         margin-left: auto;
-        padding-right: 4px;
+        padding-right: 10px;
 
         button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 0;
             height: 100%;
-            margin-left: 10px;
+            margin-left: 20px;
             cursor: pointer;
 
             img {
                 height: 100%;
+            }
+
+            span {
+                @include header-span;
+                color: rgb(215, 215, 215);
+                margin-left: 5px;
             }
 
             // Custom styling for each button

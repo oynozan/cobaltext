@@ -10,7 +10,7 @@ function menuIcon() {
 // Each ID pairs with a function
 const items = {
     "#active-line-highlight": (event) => {
-        let newVal = !window.cm.getOption("styleActiveLine");
+        let newVal = !window.cm.getOption("styleActiveLine"); // Boolean
         window.cm.setOption("styleActiveLine", newVal);
         window.cm.setOption("styleActiveSelected", newVal);
         window.cm.setOption("styleSelectedText", newVal);
@@ -18,6 +18,13 @@ const items = {
         // Change inner text dynamically
         if (newVal) event.target.innerText = "Disable Active Line Highlight";
         else event.target.innerText = "Enable Active Line Highlight";
+
+        // Send data via IPC to add it to the config file
+        window.renderer.send("add-config", {
+            editor: {
+                "active-line-highlight": newVal,
+            }
+        });
     }
 }
 

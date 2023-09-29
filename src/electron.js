@@ -17,7 +17,11 @@ class Electron {
 
         // Instances
         this.File = new FileClass();
-        this.Listener = new ListenerClass(ipcMain, app);
+        this.Listener = new ListenerClass({
+            ipc: ipcMain,
+            app: app,
+            file: this.File
+        });
 
         // These 2 variables doesn't need to be stored in config file since it'll be used if config file is corrupted
         this.minWidth = 800;
@@ -57,13 +61,15 @@ class Electron {
                 minWidth: this.minWidth,
                 minHeight: this.minHeight,
                 backgroundColor: '#1f2646',
-                // icon: __dirname + (public directory),
+                icon: path.join(__dirname, "../public/images/logo.png"),
                 webPreferences: {
                     devTools: this.nodeEnv === "development",
                     nodeIntegration: true,
                     contextIsolation: false,
                 }
             });
+
+            console.log(path.join(__dirname, "public/images/logo.png"))
 
             // Load the public/index.html which is the main file
             this.window.loadURL(

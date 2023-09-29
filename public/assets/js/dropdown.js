@@ -25,9 +25,9 @@ for (let menuText of document.querySelectorAll(".menu ul li span")) {
 }
 
 // Close the dropdown if clicked somewhere else
-window.onclick = event => {
+window.addEventListener("click", event => {
     let dropdowns = [...document.querySelectorAll(".dropdown")];
     for (let dropdown of dropdowns) {
         if (!dropdown.contains(event.target)) dropdown.style.display = "none";
     }
-}
+});

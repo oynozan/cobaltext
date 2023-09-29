@@ -10,4 +10,13 @@
     }
 
     &-vscrollbar { margin-top: 10px; }
+
+    &-scroll {
+        height: calc(100% - 30px);
+        padding-bottom: 40px;
+    }
+
+    &-sizer {
+        margin-top: 10px;
+    }
 }

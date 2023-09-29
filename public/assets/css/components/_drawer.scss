@@ -1,0 +1,43 @@
+$drawer-height: 35%;
+
+.bottom-drawer {
+    display: none;
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    max-height: $drawer-height;
+    height: $drawer-height;
+    bottom: $footer-height;
+    background-color: $drawer-bg;
+    z-index: 4;
+    border-top: 8px solid $drawer-border;
+    cursor: default;
+
+    &.open {
+        display: flex;
+    }
+
+    // change the cursor on top of drawer
+    &::before {
+        content: "";
+        position: absolute;
+        top: -8px;
+        left: 0;
+        height: 8px;
+        width: 100%;
+        cursor: row-resize;
+    }
+
+    //Little "-" icon in the middle of top border
+    &::after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-top: 2px solid $bg;
+        width: 40px;
+        cursor: row-resize;
+    }
+}
